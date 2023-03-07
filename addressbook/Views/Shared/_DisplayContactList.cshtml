@@ -1,0 +1,20 @@
+﻿<div id="contact">
+    <div class="contact-heading">CONTACTS</div>
+    @{
+        IEnumerable<AddressBook.Models.ContactDetailsViewModel> Model =TempData["contactdetails"] as IEnumerable<AddressBook.Models.ContactDetailsViewModel>;
+        for (int i = 0; i < @Model.Count(); i++)
+    {
+            string id = Convert.ToString(@Model.ElementAt(i).ID);
+        string nameId = "name" + id;
+        string emailId = "email" + id;
+        string mobileId = "mobile" + id;
+            <a asp-controller="Home" asp-action="DisplayContact" asp-route-id="@Model.ElementAt(i).ID">
+            <div class="contact-item @id">
+                <div id=nameId class="name-class">@Model.ElementAt(i).UserName</div>
+                <div id=emailId>@Model.ElementAt(i).UserEmail</div>
+                <div id=mobileId>@Model.ElementAt(i).UserMobile</div>
+            </div>
+        </a>
+    }
+    }
+</div>

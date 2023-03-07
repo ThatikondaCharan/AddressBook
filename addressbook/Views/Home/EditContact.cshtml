@@ -1,0 +1,61 @@
+﻿@model ContactDetailsViewModel
+
+<table id="table">
+    <form method="post">
+    <tr>
+        <td colspan="2">
+            <p>Name</p>
+            <input type="text" asp-for="UserName" id="name" >
+            <span asp-validation-for="UserName" class="text-danger" style="color:red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p>Email</p>
+            <input type="text" asp-for="UserEmail" id="email" >
+            <span asp-validation-for="UserEmail" class="text-danger" style="color:red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Mobile</p>
+            <input type="text" asp-for="UserMobile" id="mobile">
+        </td>
+        <td>
+            <p>LandLine</p>
+            <input type="text" asp-for="UserLandLine" id="landline">
+        </td>
+    </tr>
+     <tr>
+        <td colspan="2">
+            <span asp-validation-for="UserMobile" class="text-danger" style="color:red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p>Website</p>
+            <input type="text" asp-for="UserWebsite" id="website" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Line1</p>
+            <input type="text" asp-for="Address.Line1" id="address-line-one">
+        </td>
+        <td>
+            <p>Line2</p>
+            <input type="text" asp-for="Address.Line2" id="address-line-two">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>PostalCode</p>
+            <input type="text" asp-for="Address.ZipCode" id="address-zipcode">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td><button type="submit" id="change">Change</button></td>
+    </tr>
+    </form>
+ </table>

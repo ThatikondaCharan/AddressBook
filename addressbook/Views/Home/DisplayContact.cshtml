@@ -1,0 +1,20 @@
+﻿@model ContactDetailsViewModel
+<div id="contact-info">
+    <table>
+        <tr>
+            <td class="title">
+                <div id="contact-info-name">@Model.UserName</div>
+                <a asp-area="" asp-controller="Home" asp-action="EditContact" asp-route-id="@Model.ID"><span id="edit"><img src="~/images/Edit-icon.png">EDIT</span></a>
+                <a asp-area="" asp-controller="Home" asp-action="DeleteContact" asp-route-id="@Model.ID"><span id="delete"><img class="delete-img" src="~/images/delete2.png">DELETE</span></a>
+            </td>
+        </tr>
+        <tr><td class="title">Email:<div id="contact-info-email">@Model.UserEmail</div></td></tr>
+        <tr><td class="title">Mobile:<div id="contact-info-mobile">@Model.UserMobile</div></td></tr>
+        <tr><td class="title">LandLine:<div id="contact-info-landline">@Model.UserLandLine</div></td></tr>
+        <tr><td class="title">Website:<div id="contact-info-website">@Model.UserWebsite</div></td></tr>
+        <tr><td class="title">Address</td></tr>
+        <tr><td class="title">Line1:<div id="contact-info-address">@Model.Address.Line1</div></td></tr>
+        <tr><td class="title">Line2:<div id="contact-info-address">@Model.Address.Line2</div></td></tr>
+        <tr><td class="title">ZipCode:<div id="contact-info-address">@Model.Address.ZipCode</div></td></tr>
+    </table>
+</div>
